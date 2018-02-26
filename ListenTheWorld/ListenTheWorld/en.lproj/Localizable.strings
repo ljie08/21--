@@ -1,0 +1,41 @@
+/* 
+  Localizable.strings
+  ListenTheWorld
+
+  Created by 魔曦 on 2017/9/15.
+  Copyright © 2017年 魔曦. All rights reserved.
+*/
+
+"首页" = "Home";
+"排行榜" = "Rank";
+"热搜" = "Search";
+"我的" = "Mine";
+
+"热门榜单" = "Rank";
+"周榜" = "Week";
+"月榜" = "Month";
+"年榜" = "Year";
+"阅读" = "Scan";
+"详情" = "Detail";
+"详情加载中..." = "Loading...";
+
+"搜索你喜欢的文章" = "Input keywords";
+"取消" = "Cancel";
+"热搜关键词" = "Hot keywords";
+"搜索" = "Search";
+
+"    精选收藏" = "    Collection";
+"收藏的文章" = "Collection of articles";
+"    系统设置" = "    System Settings";
+"清空缓存" = "Clear the cache";
+"    更多说明" = "    More instructions";
+"关于我们" = "About us";
+"清除" = "Clean";
+"清除当前缓存" = "Clear the cache";
+"确定" = "Sure";
+"我们旨在为大家提供各种散文的在线阅读包括哲理类、爱情类、生活类、悬疑类等希望大家能够喜欢" = "We aim to provide you with a prose reading online including philosophy, love, life, suspense, hope you can like it";
+"收藏列表" = "Favorite the list";
+"亲,暂时还没有收藏喔" = "Dear, temporarily haven't collection";
+"" = "";
+
+

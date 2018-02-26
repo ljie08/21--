@@ -1,0 +1,115 @@
+//
+//  PrefixHeader.pch
+//  ListenTheWorld
+//
+//  Created by 魔曦 on 2017/9/12.
+//  Copyright © 2017年 魔曦. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#endif /* PrefixHeader_pch */
+
+#ifdef __OBJC__
+
+#import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
+#import "Masonry.h"
+#import "MJRefresh.h"
+#import "MJExtension.h"
+#import <AFNetworking.h>
+#import "MBProgressHUD.h"
+#import "Tools.h"
+
+#import "CategoryManager.h"
+#import "constant.h"
+#import "HMAlertView.h"
+
+
+#define RGB(R, G, B)    [UIColor colorWithRed:R/255.0 green:G/255.0 blue:B/255.0 alpha:1.0]
+#define TopSpacing 40.0f
+#define BottomSpacing 40.0f
+#define LeftSpacing 20.0f
+#define RightSpacing  20.0f
+#define DELAYEXECUTE(delayTime,func) (dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(delayTime * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{func;}))
+#define DistanceFromTopGuiden(view) (view.frame.origin.y + view.frame.size.height)
+#define DistanceFromLeftGuiden(view) (view.frame.origin.x + view.frame.size.width)
+#define ViewOrigin(view)   (view.frame.origin)
+#define ViewSize(view)  (view.frame.size)
+#define ScreenSize [UIScreen mainScreen].bounds.size
+
+
+
+#define LOCALIZED(X) NSLocalizedString(X,nil)
+
+#define COLOR_bg   [Tools hexStringToColor:@"F5F7FA"]
+
+#define Color_theme       [UIColor colorWithRed:225/255.0 green:193/255.0 blue:47/255.0 alpha:1]
+#define COLOR_title       [UIColor blackColor]
+#define COLOR_content     [UIColor colorWithRed:0.4 green:0.4 blue:0.4 alpha:1]
+
+//选中状态
+#define COLOR_sTitle  [UIColor colorWithRed:239/255.0 green:109/255.0 blue:44/255.0 alpha:1]
+#define COLOR_white  [UIColor whiteColor]
+#define COLOR_000  [Tools hexStringToColor:@"183b7b"]
+#define COLOR_002   [UIColor whiteColor]
+#define COLOR_003  [UIColor colorWithRed:129/255.0 green:183/255.0 blue:222/255.0 alpha:1]
+//#define COLOR_003  [UIColor colorWithRed:128/255.0 green:180/255.0 blue:218/255.0 alpha:1]
+
+
+#define CLEARCOLOR [UIColor clearColor]
+
+
+#define FONTSIZE(X)     [UIFont systemFontOfSize:X]
+#define BLODFONTSIZE(X)      [UIFont boldSystemFontOfSize:X]
+#define FONT_12     [UIFont systemFontOfSize:12.f]
+#define FONT_15     [UIFont systemFontOfSize:15.f]
+
+#define USER_DEFAULTS  [NSUserDefaults standardUserDefaults]
+
+//图片资源获取
+#define IMGFROMBUNDLE( X )	 [UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:X ofType:@""]]
+#define IMGNAMED( X )	     [UIImage imageNamed:X]
+
+#ifdef DEBUG
+#define DBLog(xx, ...)  NSLog(@"%s(%d): " xx, __PRETTY_FUNCTION__, __LINE__, ##__VA_ARGS__)
+#else
+#define DBLog(xx, ...)  ((void)0)
+#endif
+
+
+//解析字典
+#define PUGetObjFromDict(__key, __dict, __class)       [PUUtil getElementForKey:__key fromDict:__dict forClass:__class]
+#define PUGetIntElemForKeyFromDict(__key, __dict)      [PUUtil getIntElementForKey:__key fromDict:__dict]
+#define PUGetFloatElemForKeyFromDict(__key, __dict)      [PUUtil getFloatElementForKey:__key fromDict:__dict]
+
+#define PUGetStringElemForKeyFromDict(__key, __dict)   [PUUtil getStringElementForKey:__key fromDict:__dict]
+#define PUGetBoolElemForKeyFromDict(__key, __dict)   [PUUtil getBoolElementForKey:__key fromDict:__dict]
+
+#define SCREEN_WIDTH ([[UIScreen mainScreen] bounds].size.width)
+#define SCREEN_HEIGHT ([[UIScreen mainScreen] bounds].size.height)
+#define SCREEN_MAX_LENGTH (MAX(SCREEN_WIDTH, SCREEN_HEIGHT))
+#define SCREEN_MIN_LENGTH (MIN(SCREEN_WIDTH, SCREEN_HEIGHT))
+#define heightScale SCREEN_HEIGHT/667.0f
+#define widthScale SCREEN_WIDTH/375.0f
+
+#define iPhone4 (SCREEN_MAX_LENGTH == 480.0)
+#define iPhone5 (SCREEN_MAX_LENGTH == 568.0)
+#define iPhone5Later (SCREEN_MAX_LENGTH >= 568.0)
+#define iPhone6 (SCREEN_MAX_LENGTH == 667.0)
+#define iPhone6Later (SCREEN_MAX_LENGTH >= 667.0)
+#define iPhone6P (SCREEN_MAX_LENGTH == 736.0)
+#define iPhone6PLater (SCREEN_MAX_LENGTH >= 736.0)
+
+#define iOS7_OR_LATER   ( [UIDevice currentDevice].systemVersion.floatValue >= 7.0)
+#define iOS8_OR_LATER   ( [UIDevice currentDevice].systemVersion.floatValue >= 8.0)
+#define iOS8_3_OR_LATER   ( [UIDevice currentDevice].systemVersion.floatValue >= 8.0)
+#define iOS9_OR_LATER   ( [UIDevice currentDevice].systemVersion.floatValue >= 9.0)
+#define iOS10_OR_LATER   ( [UIDevice currentDevice].systemVersion.floatValue >= 10.0)
+
+
+#endif

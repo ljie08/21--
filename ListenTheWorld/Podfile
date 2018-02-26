@@ -1,0 +1,18 @@
+platform :ios,’8.0’
+
+def myPods
+    pod 'AFNetworking', '~> 3.0.1'
+
+    pod 'Masonry', '~> 1.0.1'
+    pod 'FMDB', '~> 2.6.2'
+    pod 'MJRefresh', '~> 3.1.12'
+    pod 'MBProgressHUD' , '~> 1.0.0'
+    pod 'SDWebImage', '~> 4.0'
+    pod 'MJExtension'  
+    pod 'IMYWebView'
+
+end
+
+target ‘ListenTheWorld’ do
+    myPods
+end
